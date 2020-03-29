@@ -1,27 +1,18 @@
-# TestNg
+# Teste Star Wars 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+Teste feito em Angular 9. 
 
-## Development server
+# Instalação
+Com o Node e Angular CLI instalados, só baixar o pacote, digitar npm install no prompt, e acessar a página no localhost:4200, conforme comportamento padrão do Angular.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Sobre o teste
 
-## Code scaffolding
+Usando a API enviada, desenvolvi o app em duas telas. Como um extra, coloquei uma busca automatizada de imagens, utilizando o CSE do Google (infelizmente limitado a 100 imagens por dia - nesse caso, carregando 10 por vez, acaba rápido). 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Utitizei Sass como pré-compilador CSS, e font-awesome para alguns ícones. Não usei framework de estilos, e alguns ícones são simplesmente imagens que achei na internet. 
 
-## Build
+Eu NUNCA havia feito um projeto completo com Angular 9. Estava estudando e começando a fazer um projeto, mas aproveitei essa oportunidade do teste para me desafiar e montar algo na ferramenta. Sei que alguns pontos podem melhorar, mas infelizmente não tive todo o tempo que eu gostaria no projeto... 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+No meu Github atualmente existem 3 projetos. Coincidentemente, 3 testes que eu já fiz, cada um em um framework. O teste de React foi feito da mesma forma que esse de Angular (tinha conhecimento básico do framework, e montei o teste em um fim de semana). O teste de React contém testes unitários e E2E utilizando Puppeteer. 
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+No mais, agradeço a oportunidade! :)
