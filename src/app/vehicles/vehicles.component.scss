@@ -1,0 +1,11 @@
+@import '../../sass/shared.scss';
+
+.vehicles {
+  @include dataStyle;
+}
+
+@media only screen and (max-width: 750px) {
+  .vehicles {
+    height: 380px;
+  }
+}

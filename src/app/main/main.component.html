@@ -1,0 +1,11 @@
+<div class="main">
+  <div class="main__body">
+    <div class="loading" *ngIf="loading; else personList" > </div>
+    <ng-template #personList><app-person *ngFor="let person of arrayT" [personData]="person"></app-person></ng-template>
+  </div>
+  
+  <div class="main__btns">
+    <button (click)="getPrev()" class="main__btns--ant" [ngClass]="{'btn-disabled': !prevPossible }"><fa-icon [icon]="faArrowAltCircleLeft"></fa-icon> Anterior </button>
+    <button (click)="getNext()" class="main__btns--pro" [ngClass]="{'btn-disabled': !nextPossible }"> Próxima <fa-icon [icon]="faArrowAltCircleRight"></fa-icon> </button>
+  </div>
+</div>

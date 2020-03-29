@@ -1,0 +1,18 @@
+<ng-scrollbar class="my-scrollbar">
+  <div class="films"> 
+    <div class="loading" *ngIf="films.length === 0; else trueFilm"> </div>
+    <ng-template #trueFilm>
+      <div *ngFor="let film of films" class="films__single" >
+        <p *ngIf="!film.title; else filmList"> None </p>
+        <ng-template #filmList>
+          <p> <span> Title: </span> {{film.title}} </p>
+          <p> <span> ID: </span> {{film.episode_id}} </p>
+          <p> <span> Opening: </span> {{film.opening_crawl}} </p>
+          <p> <span> Producer: </span> {{film.producer}} </p>
+          <p> <span> Release data: </span> {{film.release_date}} </p>
+        </ng-template>
+      </div>
+    </ng-template>
+  </div>
+</ng-scrollbar>
+

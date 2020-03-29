@@ -1,0 +1,11 @@
+@import '../../sass/shared.scss';
+
+.starships {
+  @include dataStyle;
+}
+
+@media only screen and (max-width: 750px) {
+  .starships {
+    height: 380px;
+  }
+}

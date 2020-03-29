@@ -1,0 +1,25 @@
+<ng-scrollbar class="my-scrollbar">
+  <div class="starships"> 
+    <div class="loading" *ngIf="starships.length === 0; else trueStarship"> </div>
+    <ng-template #trueStarship>
+      <div *ngFor="let starship of starships" class="starships__single" >
+        <p *ngIf="!starship.name; else starshipList"> None </p>
+        <ng-template #starshipList>
+          <p> <span> Name: </span> {{starship.name}} </p>
+          <p> <span> Model: </span> {{starship.model}} </p>
+          <p> <span> Manufacturer: </span> {{starship.manufacturer}} </p>
+          <p> <span> Cost (in credits): </span> {{starship.cost_in_credits}} </p>
+          <p> <span> Length: </span> {{starship.length}} </p>
+          <p> <span> Max atmosphering speed: </span> {{starship.max_atmosphering_speed}} </p>
+          <p> <span> Crew: </span> {{starship.crew}} </p>
+          <p> <span> Passengers: </span> {{starship.passengers}} </p>
+          <p> <span> Cargo capacity: </span> {{starship.cargo_capacity}} </p>
+          <p> <span> Consumables: </span> {{starship.consumables}} </p>
+          <p> <span> Hyperdrive: </span> {{starship.hyperdrive_rating}} </p>
+          <p> <span> MGLT: </span> {{starship.MGLT}} </p>
+          <p> <span> Vehicle Class: </span> {{starship.starship_class}} </p>
+        </ng-template>
+      </div>
+    </ng-template>
+  </div>
+</ng-scrollbar>

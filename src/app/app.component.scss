@@ -1,0 +1,22 @@
+@import '../sass/_variables.scss';
+
+.idx {
+  background-color: $bkgColor;
+  height: 100%;
+  overflow: auto;
+
+  &__header {
+    width: 100%;
+    background-color: black;
+    height: 80px;
+    padding: 10px 30px;
+
+    img {
+      width: 100px;
+    }
+  }
+
+  &__body {
+    height: calc(100% - 80px);
+  }
+}

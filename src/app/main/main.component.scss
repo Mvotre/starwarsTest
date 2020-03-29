@@ -1,0 +1,74 @@
+@import '../../sass/_variables.scss';
+
+.main {
+  padding: 20px 40px;
+  height: calc(100% - 80px);
+  overflow: auto;
+  background-image: url("../../assets/img/bkg.png");
+  background-size: 100px;
+  background-position: 5% bottom;
+  background-repeat: no-repeat;
+
+  &__body {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: calc(100% - 40px);
+  }
+
+  &__btns {
+    display: flex; 
+    justify-content: flex-end;
+
+    button {
+      padding: 10px 20px;
+      border: 0;
+      background-color: $gray;
+      color: white;
+      transition: all 0.2s;
+      border: 1px solid lighten($gray, 5%);
+
+      &:hover {
+        cursor: pointer;
+        background-color: lighten($gray, 5%);
+        color: $yellow;
+        border-color: $yellow;
+        box-shadow: 2px 2px 16px lighten($yellowHover, 10%) inset;
+      }
+    }
+
+    &--ant {
+      border-top-left-radius: 5px;
+    }
+
+    &--pro {
+      border-bottom-right-radius: 5px;
+      float: right;
+      margin-left: 10px;
+    }
+  }
+}
+
+.btn-disabled {
+  background-color: transparent !important;
+  pointer-events: none;
+  color: lighten($gray, 10%) !important;
+}
+
+.loading {
+  height: 300px;
+  margin: auto;
+  width: 30%;
+  border-bottom-right-radius: 8px;
+  background-image: url("../../assets/img/imperial_emblem.gif");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 787px) {
+  .main__body {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,25 @@
+<ng-scrollbar class="my-scrollbar">
+  <div class="vehicles"> 
+    <div class="loading" *ngIf="vehicles.length === 0; else trueVehicles"> </div>
+    <ng-template #trueVehicles>
+      <div *ngFor="let vehicle of vehicles" class="vehicles__single" >
+        <p *ngIf="!vehicle.name; else personagens"> None </p>
+        <ng-template #personagens>
+          <p> <span> Name: </span> {{vehicle.name}} </p>
+          <p> <span> Model: </span> {{vehicle.model}} </p>
+          <p> <span> Manufacturer: </span> {{vehicle.manufacturer}} </p>
+          <p> <span> Cost (in credits): </span> {{vehicle.cost_in_credits}} </p>
+          <p> <span> Length: </span> {{vehicle.length}} </p>
+          <p> <span> Max atmosphering speed: </span> {{vehicle.max_atmosphering_speed}} </p>
+          <p> <span> Crew: </span> {{vehicle.crew}} </p>
+          <p> <span> Passengers: </span> {{vehicle.passengers}} </p>
+          <p> <span> Cargo capacity: </span> {{vehicle.cargo_capacity}} </p>
+          <p> <span> Consumables: </span> {{vehicle.consumables}} </p>
+          <p> <span> Vehicle Class: </span> {{vehicle.vehicle_class}} </p>
+        </ng-template>
+      </div>
+    </ng-template>
+  </div>
+</ng-scrollbar>
+
+

@@ -1,0 +1,144 @@
+@import '../../sass/_variables.scss';
+
+.details {
+  width: 90%;
+  margin: auto;
+  background-color: white;
+  border: 1px solid black;
+  border-bottom-right-radius: 8px;
+  margin-top: 30px;
+  
+  &__main {
+    display: flex;
+
+    &__img {
+      width: 30%;
+      display: inline-block;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &__txt {
+      width: 35%;
+      display: inline-block;
+      padding: 0 30px;
+
+      p span {
+        font-size: 13px;
+        color: gray;
+      }
+    }  
+  }
+  
+  &__extra {
+    border: 1px solid black;
+    border-bottom-right-radius: 8px;
+    background-color: black;
+    width: 35%;
+    margin: 15px;
+
+    &__btns {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid black;
+      background-color: white;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: darken(gray, 14%);
+        width: 33%;
+        border: 0;
+        padding: 10px;
+        background-color: transparent;
+        transition: all 0.2s;
+
+        &:first-child{
+          border-top-left-radius: 8px;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: lighten($green-lighter, 10%);
+        }
+
+        img {
+          width: 25px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.ativado {
+  background-color: lighten($green-lighter, 10%) !important;
+  pointer-events: none;
+}
+
+.main__ctrl {
+  width: 90%;
+  margin: auto;
+
+  button {
+    margin-top: 2px;
+    margin-right: 8px;
+    background-color: lighten($green-lighter, 20%);
+    border: 0;
+    border-bottom-right-radius: 5px;
+    float: right;
+    padding: 0 5px 3px 5px;
+    font-size: 20px;
+    color: gray;
+
+    &:hover {
+      background-color: $green-lighter;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .details__main{
+    flex-wrap: wrap;
+  
+    &__img {
+      width: 100%;
+      height: 350px;
+    }
+
+    &__txt {
+      width: 40%;
+    }
+  }
+
+  .details {
+    &__extra {
+      width: 53%;
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .details__main{
+    flex-wrap: wrap;
+  
+    &__img {
+      width: 100%;
+      height: 350px;
+    }
+
+    &__txt {
+      width: 90%;
+    }
+  }
+
+  .details {
+    &__extra {
+      width: 90%;
+      height: 450px;
+    }
+  }
+}

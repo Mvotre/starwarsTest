@@ -1,0 +1,58 @@
+// Shared styles, but not global
+
+// Custom scrollbar - used on person-details
+.my-scrollbar {
+  --scrollbar-thumb-color: orange;
+  --scrollbar-thumb-hover-color: #f2d218;
+  --scrollbar-border-radius: 4px;
+  --scrollbar-size: 4px;
+  --scrollbar-padding: 6px;
+}
+
+// Loading for person-details router-outlet
+.loading {
+  height: 300px;
+  margin: auto;
+  width: 80%;
+  border-bottom-right-radius: 8px;
+  background-image: url("../../assets/img/imperial_emblem.gif");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// media querie for loading in router-outlet (inside person-details)
+@media only screen and (max-width: 750px) {
+  .loading {
+    height: 380px;
+    width: 60%;
+  }
+}
+
+// Mixins - on the same file, just because...
+// Info on the side screen in person-details
+@mixin dataStyle {
+  height: 330px;
+  color: #f5e8b3;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  p {
+    font-size: 14px;
+    margin: 3px;
+
+    span {
+      font-size: 13px;
+      color: white;
+    }
+  }
+
+  &__single {
+    padding: 8px 0 10px 0;
+    border-bottom: 2px solid white;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}

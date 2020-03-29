@@ -1,0 +1,44 @@
+<div class="details">
+  <div class="details__main">
+    <div class="details__main__img" [ngStyle]="{'background-image': getUrl()}"></div>
+    <div class="details__main__txt"> 
+      <p> <span> Name: </span> {{details.name}} </p>
+      <p> <span> Height: </span> {{details.height}} height </p>
+      <p> <span> Mass: </span> {{details.mass}}  </p>
+      <p> <span> Hair Color: </span> {{details.hair_color}}  </p>
+      <p> <span> Skin color: </span> {{details.skin_color}}  </p>
+      <p> <span> Eye color: </span> {{details.eye_color}}  </p>
+      <p> <span> Birth year: </span> {{details.birth_year}} </p>
+      <p> <span> Gender: </span> {{details.gender}} </p>
+      <p> <span> Homeworld: </span> {{planet}} </p>
+      <p> <span> Species: </span> {{species}}</p>
+    </div>
+    <div class="details__extra">
+      <div class="details__extra__btns">
+        <button [ngClass]="{'ativado': filmsActive }" (click)=getFilms()> 
+          <img src="../../assets/img/lightsaber_by_radiusss.png" alt="Icon"> 
+          Films 
+        </button> 
+        
+        <button [ngClass]="{'ativado': starshipActive }" (click)=getStarships()>
+          <img src="../../assets/img/tie_fighter_by_radiusss.png" alt="Icon">  
+          Starships 
+        </button>
+        
+        <button [ngClass]="{'ativado': vehicleActive }" (click)=getVehicles()> 
+          <img src="../../assets/img/speeder_by_radiusss.png" alt="Icon">  
+          Vehicles 
+        </button>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<div class="main__ctrl">
+  <button (click)="bckBtn()"> 
+    <fa-icon [icon]="faArrowAltCircleLeft"></fa-icon> 
+  </button>
+</div>
+
+
+
